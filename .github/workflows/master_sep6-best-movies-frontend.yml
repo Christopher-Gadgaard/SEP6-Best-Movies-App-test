@@ -59,4 +59,4 @@ jobs:
           app-name: 'Sep6-Best-Movies-Frontend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_938AEA44A17F410DACA50E150085B652 }}
-          package: .
+          package: release.zip
