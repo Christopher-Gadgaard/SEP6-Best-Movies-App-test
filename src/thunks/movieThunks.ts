@@ -24,6 +24,8 @@ import {
 const serverUrl = process.env.REACT_APP_SERVER_URL;
 
 console.log(serverUrl, "serverUrl");
+
+
 export const fetchMovie = (movieId: string) => {
   return async (dispatch: Dispatch) => {
     dispatch(fetchMovieStart());
