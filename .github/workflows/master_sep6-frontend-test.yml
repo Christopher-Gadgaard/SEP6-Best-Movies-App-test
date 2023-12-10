@@ -24,8 +24,10 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
+          REACT_APP_SERVER_URL=${{ secrets.REACT_APP_SERVER_URL }} npm run build
           npm run test --if-present -- --passWithNoTests
+        env:
+          REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
 
       - name: Zip Release
         uses: TheDoctor0/zip-release@0.7.6
