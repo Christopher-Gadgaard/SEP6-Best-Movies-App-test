@@ -24,7 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          REACT_APP_SERVER_URL=${{ secrets.REACT_APP_SERVER_URL }} npm run build
+          npm run build
           npm run test --if-present -- --passWithNoTests
         env:
           REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
